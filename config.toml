@@ -1,3 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "http://jmreyes.net/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Juanma Reyes"
+newContentEditor = "vim"
+theme = "nofancy"
+pygmentsStyle = "native"

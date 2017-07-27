@@ -11,7 +11,7 @@ theme               = "cocoa"
 author              = "Juanma Reyes"
 title               = "Juanma Reyes"
 pygmentsuseclasses  = true
-disqusshortname     = "juanmareyes" # Comment out to disable Disqus.
+disqusshortname     = "jmreyes" # Comment out to disable Disqus.
 pluralizelisttitles = false
 #googleAnalytics     = "UA-123-45"
 

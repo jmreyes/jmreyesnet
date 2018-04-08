@@ -22,12 +22,27 @@
             <div class="markdown">
                 {{ .Content }}
                 <br>
-		<p><a href="/blog/">{{ i18n "backToPosts" }}</a></p>
+		<p class="back-to-posts"><a href="/blog/">{{ i18n "backToPosts" }}</a></p>
             </div>
             <br>
             <div class="disqus">
                 {{ template "_internal/disqus.html" . }}
             </div>
+            {{ if .Site.Params.gitalk }}
+            <div id="gitalk-container"></div>
+            <script type="text/javascript">
+                const gitalk = new Gitalk({
+                  clientID: "{{ .Site.Params.gitalk_clientID }}",
+                  clientSecret: "{{ .Site.Params.gitalk_clientSecret }}",
+                  repo: "{{ .Site.Params.gitalk_repo }}",
+                  owner: "{{ .Site.Params.gitalk_owner }}",
+                  admin: {{ .Site.Params.gitalk_admin }},
+                  // facebook-like distraction free mode
+                  distractionFreeMode: true
+                })
+                gitalk.render('gitalk-container')
+            </script>
+            {{ end }}
         </div>
     </div>
 </section>
